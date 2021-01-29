@@ -25,7 +25,7 @@ const styles = {
   mainWrapper: 'mainWrapper'
 }
 
-const bookLink = ''
+const bookLink = 'https://www.amazon.com/Getting-started-Deno-JavaScript-applications/dp/180020566X?ref_=d6k_applink_bb_marketplace'
 
 const SectionTitle = ({ children, className }: { children: any, className?: string }) => <div className={["sectionTitle", className].join(' ')}>{children}</div>
 const SectionResume = ({ children, className }: { children: any, className?: string }) => <div className={["sectionResume", className].join(' ')}>{children}</div>
@@ -195,7 +195,7 @@ Vitae suscipit tellus mauris a diam maecenas sed enim ut.</SectionResume>
               'Deploying a Deno application',
               'What\'s next?',
             ]} />
-          <a href="" className="button accessContent">Access all the content</a>
+          <a href={bookLink} target="_blank" className="button accessContent">Access all the content</a>
         </div>
       </Section>
       <Section className="dark">
