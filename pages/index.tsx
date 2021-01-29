@@ -1,7 +1,5 @@
-import { Import, useDeno } from 'https://deno.land/x/aleph/mod.ts'
-import React, { useState } from 'https://esm.sh/react'
+import React from 'https://esm.sh/react'
 import ReactCardCarousel from "https://esm.sh/react-card-carousel";
-import Logo from '../components/logo.tsx'
 import './styles.css';
 
 const styles = {
