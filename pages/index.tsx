@@ -234,7 +234,7 @@ Vitae suscipit tellus mauris a diam maecenas sed enim ut.</SectionResume>
         <SectionResume className="dark">Share your thoughts on Twitter by using the hashtag #denowebdevelopment</SectionResume>
 
         <div className="reviewsWrapper">
-          <ReactCardCarousel autoplay={true} spread="wide" autoplay_speed={2500}>
+          <ReactCardCarousel autoplay={true} spread="wide" autoplay_speed={4000}>
             {reviews.map(review => (
               <ReviewCard {...review} />
             ))}

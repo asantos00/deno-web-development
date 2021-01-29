@@ -115,6 +115,8 @@ ol li {
   justify-content: space-between;
   margin-bottom: 32px;
   padding: 16px;
+  position: relative;
+  overflow: hidden;
 }
 @media only screen and (max-width: 480px) {
   .header {
@@ -197,6 +199,7 @@ ol li {
   flex-grow: 1;
   display: flex;
   justify-content: space-between;
+  width: 100%;
 }
 
 .bookText {
