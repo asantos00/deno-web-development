@@ -328,6 +328,7 @@ ol li {
 }
 
 .bookSectionTitle {
+  position: relative;
   background: rgba(64, 64, 64, 0.2);
   padding: 8px 16px;
 }
@@ -395,6 +396,13 @@ ol li {
 .contacts a {
   margin: 0 8px;
   color: white;
+}
+
+.denoImage {
+  width: 156px;
+  position: absolute;
+  right: -64px;
+  top: -48px;
 }
 
 .contacts a:first-child {

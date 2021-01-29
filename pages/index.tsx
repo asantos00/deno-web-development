@@ -33,9 +33,9 @@ const SectionTitle = ({ children, className }: { children: any, className?: stri
 const SectionResume = ({ children, className }: { children: any, className?: string }) => <div className={["sectionResume", className].join(' ')}>{children}</div>
 const Section = ({ children, className }: { children: any, className?: string }) => <div className={["section", className].join(' ')}>{children}</div>
 
-const BookSection = ({ title, chapters, start = 1 }: { title: string, chapters: string[], start?: number }) => (
+const BookSection = ({ title, chapters, start = 1, topImage = () => { } }: { title: string, chapters: string[], start?: number; topImage?: any }) => (
   <div className="bookSection">
-    <div className="bookSectionTitle">{title}</div>
+    <div className="bookSectionTitle">{title}{topImage}</div>
     <div className="bookSectionChapters">
       <ol start={start}>
         {chapters.map(chapter => (
@@ -177,7 +177,9 @@ export default function Home() {
         <SectionResume className="dark">Amet dictum sit amet justo donec enim diam vulputate.
 Vitae suscipit tellus mauris a diam maecenas sed enim ut.</SectionResume>
         <div className="bookSectionWrapper">
-          <BookSection title="Chapter 1. Introduction" chapters={['What is deno?', 'The toolchain', 'Runtime and standard library']} />
+          <BookSection
+            topImage={<img className="denoImage" src="/deno-image.png" />}
+            title="Chapter 1. Introduction" chapters={['What is deno?', 'The toolchain', 'Runtime and standard library']} />
           <BookSection
             title="Chapter 2. Building an application"
             start={4}
@@ -186,7 +188,8 @@ Vitae suscipit tellus mauris a diam maecenas sed enim ut.</SectionResume>
               'Adding users and migrating to oak',
               'Authentication and connection the the database',
               'HTTPS, configuration and Deno on the browser'
-            ]} />
+            ]}
+          />
           <BookSection
             title="Chapter 3. Testing and deploying"
             start={8}
