@@ -172,8 +172,7 @@ export default function Home() {
       </Section>
       <Section className="light">
         <SectionTitle className="dark">What's inside</SectionTitle>
-        <SectionResume className="dark">Amet dictum sit amet justo donec enim diam vulputate.
-Vitae suscipit tellus mauris a diam maecenas sed enim ut.</SectionResume>
+        <SectionResume className="dark">A guided process on learning Deno and its features while a complete web application, from hello world, to testing, adding users and deploying.</SectionResume>
         <div className="bookSectionWrapper">
           <img className="denoImage" src="/deno-image.png" />
           <BookSection
