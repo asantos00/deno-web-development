@@ -135,13 +135,6 @@ export default function Home() {
                   using Deno
               </h2>
               </div>
-              <a
-                href={bookLink}
-                className={[styles.buyButton, 'button'].join(' ')}
-              >
-                <img src="/amazon.png" />
-                Buy from Amazon
-          </a>
             </div>
             <img
               className={styles.bookCover}
@@ -149,7 +142,13 @@ export default function Home() {
               alt="Deno Web Development book cover"
             />
           </div>
-          <div></div>
+          <a
+            href={bookLink}
+            className={[styles.buyButton, 'button'].join(' ')}
+          >
+            <img src="/amazon.png" />
+                Buy from Amazon
+          </a>
         </div>
       </div>
       <Section className="dark">
@@ -175,8 +174,8 @@ export default function Home() {
         <SectionResume className="dark">Amet dictum sit amet justo donec enim diam vulputate.
 Vitae suscipit tellus mauris a diam maecenas sed enim ut.</SectionResume>
         <div className="bookSectionWrapper">
+          <img className="denoImage" src="/deno-image.png" />
           <BookSection
-            topImage={<img className="denoImage" src="/deno-image.png" />}
             title="Chapter 1. Introduction" chapters={['What is deno?', 'The toolchain', 'Runtime and standard library']} />
           <BookSection
             title="Chapter 2. Building an application"
@@ -250,6 +249,7 @@ Vitae suscipit tellus mauris a diam maecenas sed enim ut.</SectionResume>
           <div>Alexandre Portela dos Santos</div>
           <div className="job">Engineering manager / Tech lead @ KI labs</div>
         </div>
+        <img className="authorPhoto" src="/author.png" />
         <p className="white-text">
           Alexandre Portela dos Santos is a software engineer passionate about
           products and startups.
@@ -276,7 +276,6 @@ Vitae suscipit tellus mauris a diam maecenas sed enim ut.</SectionResume>
           <a href="https://twitter.com/ampsantos0">Twitter</a>|
           <a href="https://alexandrempsantos.com">Blog</a>
         </div>
-        <img className="authorPhoto" src="/author.png" />
       </Section>
       <Section className="questions">
         <h3 className={styles.inverted}>Questions?</h3>

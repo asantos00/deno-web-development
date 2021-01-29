@@ -8,6 +8,7 @@
     Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji,
     Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
   font-size: 14px;
+  overflow-x: hidden;
 }
 
 a {
@@ -109,6 +110,13 @@ ol li {
   margin-bottom: 32px;
   padding: 16px;
 }
+@media only screen and (max-width: 480px) {
+  .header {
+    margin-bottom: 0;
+    align-items: center;
+    justify-content: center;
+  }
+}
 
 .websiteWrapper {
   flex-grow: 1;
@@ -121,6 +129,13 @@ ol li {
   position: absolute;
   width: calc(100% - 16px);
   text-align: center;
+}
+@media only screen and (max-width: 480px) {
+  .websiteWrapper {
+    position: initial;
+    width: initial;
+    flex-grow: 0;
+  }
 }
 
 .websiteWrapper a {
@@ -141,14 +156,30 @@ ol li {
   margin-bottom: 0;
   margin-right: 16px;
 }
+@media only screen and (max-width: 480px) {
+  .logoWrapper {
+    font-size: 18px;
+    margin-right: 16px;
+  }
+  .logoWrapper img {
+    width: 38px;
+  }
+}
 
 .bookWrapper {
   display: flex;
   align-items: center;
-  flex-direction: row;
+  flex-direction: column;
   margin-bottom: 48px;
   overflow: hidden;
   padding: 0 20%;
+  padding-bottom: 40px;
+}
+
+@media only screen and (max-width: 480px) {
+  .bookWrapper {
+    padding: 0 32px;
+  }
 }
 
 .authorJob {
@@ -161,17 +192,39 @@ ol li {
   justify-content: space-between;
 }
 
-.bookCover {
-  width: 282px;
-  align-self: flex-end;
-}
-
 .bookText {
   margin-top: 20px;
   padding-right: 16px;
   max-width: 30%;
   display: flex;
   flex-direction: column;
+}
+
+.bookCover {
+  width: 282px;
+  align-self: flex-end;
+}
+
+@media only screen and (max-width: 480px) {
+  .textCoverWrapper {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .bookText {
+    margin-top: 0;
+    max-width: initial;
+    padding-right: 0;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .bookCover {
+    width: 180px;
+    align-self: center;
+  }
 }
 
 .bookText h1 {
@@ -199,6 +252,15 @@ ol li {
 
 .buyButton {
   width: 200px;
+  align-self: flex-start;
+  margin-top: -48px;
+}
+@media only screen and (max-width: 480px) {
+  .buyButton {
+    width: 80%;
+    margin: 16px auto;
+    margin-top: 48px;
+  }
 }
 
 .buyButton img {
@@ -230,6 +292,7 @@ ol li {
 .section {
   padding: 56px 20%;
 }
+
 .section.dark {
   background: #3d3d3b;
 }
@@ -273,6 +336,26 @@ ol li {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+}
+
+@media only screen and (max-width: 480px) {
+  .section {
+    padding: 56px 32px;
+  }
+  .sectionTitle {
+    margin: 0 32px;
+  }
+
+  .sectionResume {
+    margin: 20px 32px;
+  }
+  .learnings {
+    flex-direction: column;
+  }
+
+  .learningPoint {
+    width: 100%;
+  }
 }
 
 .learningsCircle {
@@ -321,10 +404,17 @@ ol li {
 }
 
 .bookSectionWrapper {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: 40px;
+}
+
+@media only screen and (max-width: 480px) {
+  .bookSectionWrapper {
+    margin-top: 0;
+  }
 }
 
 .bookSectionTitle {
@@ -346,6 +436,11 @@ ol li {
 .accessContent {
   padding-left: 24px;
   padding-right: 24px;
+}
+@media only screen and (max-width: 480px) {
+  .accessContent {
+    margin-top: 0;
+  }
 }
 
 .reviewCard {
@@ -388,6 +483,14 @@ ol li {
   right: 0;
 }
 
+@media only screen and (max-width: 480px) {
+  .authorPhoto {
+    position: relative;
+    width: 100%;
+    padding-bottom: 32px;
+  }
+}
+
 .contacts {
   margin-top: 60px;
   color: white;
@@ -399,10 +502,22 @@ ol li {
 }
 
 .denoImage {
+  z-index: 2;
   width: 156px;
   position: absolute;
   right: -64px;
   top: -48px;
+}
+
+@media only screen and (max-width: 480px) {
+  .denoImage {
+    position: relative;
+    z-index: 2;
+    width: 116px;
+    right: initial;
+    top: initial;
+    padding-bottom: 16px;
+  }
 }
 
 .contacts a:first-child {
