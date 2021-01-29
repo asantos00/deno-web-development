@@ -458,9 +458,38 @@ ol li {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
+.rating {
+  margin-top: 8px;
+}
+
+.star {
+  width: 14px;
+}
+
+.personWrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+.personJob {
+  margin-top: 8px;
+  font-size: 12px;
+}
+
+.personName {
+  font-weight: 700;
+}
+
+.reviewWrapper {
+  margin-top: 8px;
+  font-size: 12px;
+  height: 45px;
+}
+
 .personPhotoWrapper img {
-  width: 48px;
-  height: 48px;
+  width: 64px;
+  height: 64px;
+  padding-right: 16px;
 }
 
 .reviewsWrapper {

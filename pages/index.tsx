@@ -69,10 +69,10 @@ const ReviewCard = ({ photo, job, person, text, rating }: {
           <img src={photo} />
         </div>
         <div className="personDetailsWrapper">
-          <div>
+          <div className="personName">
             {person}
           </div>
-          <div>
+          <div className="personJob">
             {job}
           </div>
 
@@ -81,7 +81,7 @@ const ReviewCard = ({ photo, job, person, text, rating }: {
       <div className="reviewWrapper">
         {text}
       </div>
-      <div>{rating}</div>
+      <div className="rating">{rating}</div>
     </div>
   )
 }
@@ -91,22 +91,22 @@ const reviews = [
     photo: 'https://s3-alpha-sig.figma.com/img/2908/435c/75dac9eb03981d35f4f45654af23531f?Expires=1612742400&Signature=Sohlz276x8sNSFxu20mZNDS42XUJGcScxw~WyXzT1oyZKdEmIRpvERMGaPjzIALxml5jzDMRW-vYPz8-sN5kiPYHY7hYCCZd1Sj4V56CdV0B8HwYXWU3XUbFS5V~ukQlz9SXR1qf65oUQlcnj~GLkImoGlfV9IMW7QQ33XDmk3K4Fc2SH1gqUf2yFcu6TZ889oIZX3GYLADk8fto19NZRWIYvOaHPtKHhAoX~17-3DN97~gch73ygdv2EZmUNXRaUuSlWYI0QIgu8y3cqeId775s~Vv5piy4Bh6qJOa3x0E4wgyinBlmcdajf3CHAWVtuTp~e2XrqcVZDyjCAIXiSA__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA',
     job: 'Full-stack developer',
     person: 'Bruno Lopes',
-    text: 'loved it!',
-    rating: '5'
+    text: 'Tristique senectus et netus et malesuada ac turpis. Pharetra sit amet aliquam id diam maecenas ultricies.',
+    rating: new Array(5).fill(<img className="star" src="/star.png" />)
   },
   {
     photo: 'https://s3-alpha-sig.figma.com/img/d1f3/0a8e/9123fdf67789142a9dbbf4dc971532c3?Expires=1612742400&Signature=PQ-1cNMpEe5-ksKqrtAgI~uv1G-z4gXhUZL4mglPqG9RYS9M14qHji1fAVkRwyZmEO1I6VAl4dfPo3lLcHskRzU63YoRg7uLdvGY3HKgzI63LW7N5h-Ep4eI-zcqExcdDvr~InAMjnglAHP4kMXIix3eBx5LPCDrBk6v~iEUS4bkY92v7u0-OuliOS50gygHVFc29jbG~3v2kf0av3eTR9n8gLamAbPalcYcu2ReNjHfRmJdAOGu17cVr0o2UiX6TSuqJIDPrjFJgtdYLRoNWYxBd8mkgRAtojMC9l1qcc8y8STVGDRxSxxfycJWVct8hKoSEl2sn1cf-TpKyUubLQ__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA',
     job: 'Full-stack developer',
     person: 'Bruno Lopes',
     text: 'loved it!',
-    rating: '5'
+    rating: new Array(5).fill(<img className="star" src="/star.png" />)
   },
   {
     photo: 'https://s3-alpha-sig.figma.com/img/e5e0/5f05/efce2fbee595a4264fa151a1afc9a262?Expires=1612742400&Signature=ZP~BUQg4wPfb6IGCU-b4I7DtcQkOLt1DoyUehjolWoGDjtFVTm~DlF7Vq6T3~eqR5pEkAa~15f-6wz7McWdfiKPS1quZsjev3PwDD3B-Iuitdr8PgyTKmbLS8Mzc4f7mxkKDRwUXY45kANDleCKkepjyMQHC4BLBYJ9bitHTxTk3~EOXqk3MyQ~eDjkZr-9dETdyWhpcGE~QYNQo5nX1RU8Mlz0W67WgiPD7rkJdI3jnxDTWLk-vh5xsjIummkeGsKyYcz6Cq17DGx01Tjqp~o3gScgmAlR-Zhe8NbXgznKcgWpeIvIrTfgqoKQH30lsA0vQ7rv6I9Ng8sSsKrLH3A__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA',
     job: 'Full-stack developer',
     person: 'Bruno Lopes',
     text: 'loved it!',
-    rating: '5'
+    rating: new Array(5).fill(<img className="star" src="/star.png" />)
   },
 ]
 
