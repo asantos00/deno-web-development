@@ -7,7 +7,7 @@ export default function App({ Page, pageProps }: { Page: ComponentType<any>, pag
     <>
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Hello World - Aleph.js</title>
+        <title>Deno Web Development - Alexandre Santos</title>
       </Head>
       <Page {...pageProps} />
     </>

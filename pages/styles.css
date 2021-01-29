@@ -112,12 +112,15 @@ ol li {
 
 .websiteWrapper {
   flex-grow: 1;
-  height: 56px;
+  height: 42px;
   display: flex;
   align-items: center;
   font-size: 12px;
   font-weight: 600;
   justify-content: center;
+  position: absolute;
+  width: 100%;
+  text-align: center;
 }
 
 .websiteWrapper a {
