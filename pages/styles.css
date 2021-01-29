@@ -103,6 +103,12 @@ ol li {
   margin: 60px 0;
 }
 
+@media only screen and (max-width: 480px) {
+  .bookPresentation {
+    margin: 32px 0;
+  }
+}
+
 .header {
   display: flex;
   flex-direction: row;
@@ -115,6 +121,7 @@ ol li {
     margin-bottom: 0;
     align-items: center;
     justify-content: center;
+    padding-top: 32px;
   }
 }
 
