@@ -17,6 +17,9 @@ export default function App({ Page, pageProps }: { Page: ComponentType<any>, pag
         <meta property="og:title" content="Deno Web Development - Write, test, maintain JavaScript and TypeScript web applications using Deno"></meta>
         <meta property="og:description" content="A book about writing, testing and maintaining JavaScript and TypeScript web applications using Deno"></meta>
         <meta property="og:image" content="https://deno-web-development.com/banner-seo.png"></meta>
+        <meta property="og:image:width" content="1200"></meta>
+        <meta property="og:image:height" content="600"></meta>
+        <meta property="og:image:secure_url" content="https://deno-web-development.com/banner-seo.png"></meta>
 
         <meta property="twitter:card" content="summary_large_image"></meta>
         <meta property="twitter:url" content="https://deno-web-development.com/"></meta>
