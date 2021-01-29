@@ -9,6 +9,7 @@
     Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
   font-size: 14px;
   overflow-x: hidden;
+  text-align: justify;
 }
 
 a {
@@ -207,6 +208,7 @@ ol li {
   padding-right: 16px;
   max-width: 30%;
   display: flex;
+  text-align: left;
   flex-direction: column;
 }
 
@@ -520,6 +522,12 @@ ol li {
   width: 330px;
   bottom: 0;
   right: 0;
+}
+
+@media only screen and (max-width: 1250px) {
+  .authorPhoto {
+    width: 200px;
+  }
 }
 
 @media only screen and (max-width: 480px) {
