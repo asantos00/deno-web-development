@@ -119,7 +119,7 @@ ol li {
   font-weight: 600;
   justify-content: center;
   position: absolute;
-  width: 100%;
+  width: calc(100% - 16px);
   text-align: center;
 }
 
