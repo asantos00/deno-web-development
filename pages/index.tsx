@@ -172,11 +172,7 @@ export default function Home() {
       </Section>
       <Section className="light">
         <SectionTitle className="dark">What's inside</SectionTitle>
-<<<<<<< HEAD
-        <SectionResume className="dark">A guided process on learning Deno and its features while building a complete web application, from hello world, to testing, adding users and deploying.</SectionResume>
-=======
         <SectionResume className="dark">A 10 chapter guided journey on learning Deno and its features while building a complete web application, from hello world, to testing, adding users and deploying.</SectionResume>
->>>>>>> 28613dc621632c6bed05d93d7508e50a3e86b3a7
         <div className="bookSectionWrapper">
           <img className="denoImage" src="/deno-image.png" />
           <BookSection
