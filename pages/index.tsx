@@ -172,13 +172,13 @@ export default function Home() {
       </Section>
       <Section className="light">
         <SectionTitle className="dark">What's inside</SectionTitle>
-        <SectionResume className="dark">A guided process on learning Deno and its features while a complete web application, from hello world, to testing, adding users and deploying.</SectionResume>
+        <SectionResume className="dark">A 10 chapter guided journey on learning Deno and its features while building a complete web application, from hello world, to testing, adding users and deploying.</SectionResume>
         <div className="bookSectionWrapper">
           <img className="denoImage" src="/deno-image.png" />
           <BookSection
-            title="Chapter 1. Introduction" chapters={['What is deno?', 'The toolchain', 'Runtime and standard library']} />
+            title="I. Introduction" chapters={['What is deno?', 'The toolchain', 'Runtime and standard library']} />
           <BookSection
-            title="Chapter 2. Building an application"
+            title="II. Building an application"
             start={4}
             chapters={[
               'Building a web application',
@@ -188,7 +188,7 @@ export default function Home() {
             ]}
           />
           <BookSection
-            title="Chapter 3. Testing and deploying"
+            title="III. Testing and deploying"
             start={8}
             chapters={[
               'Testing - Unit and integration',
