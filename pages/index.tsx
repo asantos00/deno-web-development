@@ -131,7 +131,7 @@ export default function Home() {
               <div className="bookPresentation">
                 <h1>Deno Web Development</h1>
                 <h2>
-                  Write, test, maintain JavaScript and TypeScript web applications
+                  Write, test, maintain and deploy JavaScript and TypeScript web applications
                   using Deno
               </h2>
               </div>
@@ -172,7 +172,7 @@ export default function Home() {
       </Section>
       <Section className="light">
         <SectionTitle className="dark">What's inside</SectionTitle>
-        <SectionResume className="dark">A guided process on learning Deno and its features while a complete web application, from hello world, to testing, adding users and deploying.</SectionResume>
+        <SectionResume className="dark">A guided process on learning Deno and its features while building a complete web application, from hello world, to testing, adding users and deploying.</SectionResume>
         <div className="bookSectionWrapper">
           <img className="denoImage" src="/deno-image.png" />
           <BookSection
