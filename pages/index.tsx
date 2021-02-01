@@ -121,7 +121,7 @@ export default function Home() {
           <a
             href={bookLink}
             target="_blank"
-            className={[styles.buyButton, 'button'].join(' ')}
+            className="button buyButton"
           >
             <img src="/amazon.png" />
                 Buy from Amazon
