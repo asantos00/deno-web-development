@@ -1,5 +1,5 @@
 import React, { ComponentType } from 'https://esm.sh/react'
-import { Head } from 'https://deno.land/x/aleph/mod.ts'
+import { Head, Scripts } from 'https://deno.land/x/aleph/mod.ts'
 import './style/index.css';
 
 export default function App({ Page, pageProps }: { Page: ComponentType<any>, pageProps: any }) {
@@ -28,7 +28,19 @@ export default function App({ Page, pageProps }: { Page: ComponentType<any>, pag
         <meta property="twitter:image" content="https://deno-web-development.com/banner-seo.png"></meta>
         <link rel="image_src" href="https://deno-web-development.com/banner-seo.png" />
       </Head>
+      <Scripts>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-2ETE5MRE3Y"></script>
+        <script>{`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-2ETE5MRE3Y');
+        `}
+        </script>
+      </Scripts>
       <Page {...pageProps} />
+
     </>
   )
 }

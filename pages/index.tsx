@@ -1,12 +1,13 @@
 import React from 'https://esm.sh/react'
 import ReactCardCarousel from "https://esm.sh/react-card-carousel";
 import './styles.css';
+import Config from '../config.ts';
 
 const bookLink = 'https://www.amazon.com/Getting-started-Deno-JavaScript-applications/dp/180020566X?ref_=d6k_applink_bb_marketplace'
 
 const SectionTitle = ({ children, className }: { children: any, className?: string }) => <div className={["sectionTitle", className].join(' ')}>{children}</div>
 const SectionResume = ({ children, className }: { children: any, className?: string }) => <div className={["sectionResume", className].join(' ')}>{children}</div>
-const Section = ({ children, className }: { children: any, className?: string }) => <div className={["section", className].join(' ')}>{children}</div>
+const Section = ({ children, className, showIf = true }: { children: any, className?: string, showIf: boolean }) => showIf && (<div className={["section", className].join(' ')}>{children}</div>)
 const BookSection = ({ title, chapters, start = 1, topImage = () => { } }: { title: string, chapters: string[], start?: number; topImage?: any }) => (
   <div className="bookSection">
     <div className="bookSectionTitle">{title}{topImage}</div>
@@ -204,7 +205,7 @@ export default function Home() {
         </p>
 
       </Section>
-      <Section className="light">
+      <Section showIf={Config.enableReviews} className="light">
         <SectionTitle className="dark">What people are saying</SectionTitle>
         <SectionResume className="dark">Share your thoughts on Twitter by using the hashtag #denowebdevelopment</SectionResume>
 
