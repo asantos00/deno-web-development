@@ -2,35 +2,11 @@ import React from 'https://esm.sh/react'
 import ReactCardCarousel from "https://esm.sh/react-card-carousel";
 import './styles.css';
 
-const styles = {
-  wrapper: 'wrapper',
-  header: 'header',
-  logoWrapper: 'logoWrapper',
-  websiteWrapper: 'websiteWrapper',
-  bookWrapper: 'bookWrapper',
-  textCoverWrapper: 'textCoverWrapper',
-  bookText: 'bookText',
-  buyButton: 'buyButton',
-  bookCover: 'bookCover',
-  theBookWrapper: 'theBookWrapper',
-  tableSection: 'tableSection',
-  tableItem: 'tableItem',
-  theAuthor: 'theAuthor',
-  authorPhotoWrapper: 'authorPhotoWrapper',
-  authorJob: 'authorJob',
-  contacts: 'contacts',
-  copywright: 'copywright',
-  questions: 'questions',
-  inverted: 'inverted',
-  mainWrapper: 'mainWrapper'
-}
-
 const bookLink = 'https://www.amazon.com/Getting-started-Deno-JavaScript-applications/dp/180020566X?ref_=d6k_applink_bb_marketplace'
 
 const SectionTitle = ({ children, className }: { children: any, className?: string }) => <div className={["sectionTitle", className].join(' ')}>{children}</div>
 const SectionResume = ({ children, className }: { children: any, className?: string }) => <div className={["sectionResume", className].join(' ')}>{children}</div>
 const Section = ({ children, className }: { children: any, className?: string }) => <div className={["section", className].join(' ')}>{children}</div>
-
 const BookSection = ({ title, chapters, start = 1, topImage = () => { } }: { title: string, chapters: string[], start?: number; topImage?: any }) => (
   <div className="bookSection">
     <div className="bookSectionTitle">{title}{topImage}</div>
@@ -60,7 +36,7 @@ const LearningCircle = ({ number }: { number: number }) => {
 }
 
 const ReviewCard = ({ photo, job, person, text, rating }: {
-  photo: string, job: string, person: string, text: string, rating: number
+  photo: string, job: string, person: string, text: string, rating: React.ElementType[]
 }) => {
   return (
     <div className="reviewCard">
@@ -112,22 +88,22 @@ const reviews = [
 
 export default function Home() {
   return (
-    <div className={styles.wrapper}>
+    <div className="wrapper">
       <div className="aboveTheFold">
-        <header className={styles.header}>
-          <div className={styles.logoWrapper}>
+        <header className="header">
+          <div className="logoWrapper">
             <img src="https://deno.land/logo.svg" alt="deno logo" />
             <div>Deno</div>
           </div>
-          <div className={styles.websiteWrapper}>
+          <div className="websiteWrapper">
             <span>
               <a href="https://alexandrempsantos.com">alexandrempsantos.com</a>
             </span>
           </div>
-        </header>
-        <div className={styles.bookWrapper}>
-          <div className={styles.textCoverWrapper}>
-            <div className={styles.bookText}>
+        </header >
+        <div className="bookWrapper">
+          <div className="textCoverWrapper">
+            <div className="bookText">
               <div className="bookPresentation">
                 <h1>Deno Web Development</h1>
                 <h2>
@@ -137,7 +113,7 @@ export default function Home() {
               </div>
             </div>
             <img
-              className={styles.bookCover}
+              className="bookCover"
               src="/book-cover.png"
               alt="Deno Web Development book cover"
             />
@@ -151,7 +127,7 @@ export default function Home() {
                 Buy from Amazon
           </a>
         </div>
-      </div>
+      </div >
       <Section className="dark">
         <SectionTitle>What will you learn from this book?</SectionTitle>
         <SectionResume>A complete guide with step-by-step explanations of Deno’s primitives, using them to build real-word applications.</SectionResume>
@@ -270,7 +246,7 @@ export default function Home() {
           collaboration, ownership, and teams of great people, he strives to
           nurture those values in every project he works in.
         </p>
-        <div className={styles.contacts}>
+        <div className="contacts">
           <a href="https://www.linkedin.com/in/alexandrempsantos/">LinkedIn</a>|
           <a href="https://github.com/asantos00">GitHub</a>|
           <a href="https://twitter.com/ampsantos0">Twitter</a>|
@@ -278,15 +254,15 @@ export default function Home() {
         </div>
       </Section>
       <Section className="questions">
-        <h3 className={styles.inverted}>Questions?</h3>
+        <h3 className="inverted">Questions?</h3>
         <p>
           Email me at{" "}
           <a href="mailto:alexandre.santozz@gmail.com">
             alexandre.santozz@gmail.com
         </a>
         </p>
-        <span className={styles.copywright}>
-          Alexandre Portela dos Santos © {new Date().getFullYear()}
+        <span className="copywright">
+          Build using Deno (aleph.js) by Alexandre Portela dos Santos © {new Date().getFullYear()}
         </span>
       </Section>
     </div >
