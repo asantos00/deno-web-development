@@ -7,7 +7,7 @@ const bookLink = 'https://www.amazon.com/Getting-started-Deno-JavaScript-applica
 
 const SectionTitle = ({ children, className }: { children: any, className?: string }) => <div className={["sectionTitle", className].join(' ')}>{children}</div>
 const SectionResume = ({ children, className }: { children: any, className?: string }) => <div className={["sectionResume", className].join(' ')}>{children}</div>
-const Section = ({ children, className, showIf = true }: { children: any, className?: string, showIf: boolean }) => showIf && (<div className={["section", className].join(' ')}>{children}</div>)
+const Section = ({ children, className, showIf = true }: { children: any, className?: string, showIf?: boolean }) => showIf ? (<div className={["section", className].join(' ')}>{children}</div>) : null
 const BookSection = ({ title, chapters, start = 1, topImage = () => { } }: { title: string, chapters: string[], start?: number; topImage?: any }) => (
   <div className="bookSection">
     <div className="bookSectionTitle">{title}{topImage}</div>
@@ -43,7 +43,7 @@ const ReviewCard = ({ photo, job, person, text, rating }: {
     <div className="reviewCard">
       <div className="personWrapper">
         <div className="personPhotoWrapper">
-          <img src={photo} />
+          <img alt={`${person} photo`} src={photo} />
         </div>
         <div className="personDetailsWrapper">
           <div className="personName">
@@ -69,21 +69,21 @@ const reviews = [
     job: 'Full-stack developer',
     person: 'Bruno Lopes',
     text: 'Tristique senectus et netus et malesuada ac turpis. Pharetra sit amet aliquam id diam maecenas ultricies.',
-    rating: new Array(5).fill(<img className="star" src="/star.png" />)
+    rating: new Array(5).fill(<img alt="rating star" className="star" src="/star.png" />)
   },
   {
     photo: 'https://s3-alpha-sig.figma.com/img/d1f3/0a8e/9123fdf67789142a9dbbf4dc971532c3?Expires=1612742400&Signature=PQ-1cNMpEe5-ksKqrtAgI~uv1G-z4gXhUZL4mglPqG9RYS9M14qHji1fAVkRwyZmEO1I6VAl4dfPo3lLcHskRzU63YoRg7uLdvGY3HKgzI63LW7N5h-Ep4eI-zcqExcdDvr~InAMjnglAHP4kMXIix3eBx5LPCDrBk6v~iEUS4bkY92v7u0-OuliOS50gygHVFc29jbG~3v2kf0av3eTR9n8gLamAbPalcYcu2ReNjHfRmJdAOGu17cVr0o2UiX6TSuqJIDPrjFJgtdYLRoNWYxBd8mkgRAtojMC9l1qcc8y8STVGDRxSxxfycJWVct8hKoSEl2sn1cf-TpKyUubLQ__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA',
     job: 'Full-stack developer',
     person: 'Bruno Lopes',
     text: 'loved it!',
-    rating: new Array(5).fill(<img className="star" src="/star.png" />)
+    rating: new Array(5).fill(<img alt="rating star" className="star" src="/star.png" />)
   },
   {
     photo: 'https://s3-alpha-sig.figma.com/img/e5e0/5f05/efce2fbee595a4264fa151a1afc9a262?Expires=1612742400&Signature=ZP~BUQg4wPfb6IGCU-b4I7DtcQkOLt1DoyUehjolWoGDjtFVTm~DlF7Vq6T3~eqR5pEkAa~15f-6wz7McWdfiKPS1quZsjev3PwDD3B-Iuitdr8PgyTKmbLS8Mzc4f7mxkKDRwUXY45kANDleCKkepjyMQHC4BLBYJ9bitHTxTk3~EOXqk3MyQ~eDjkZr-9dETdyWhpcGE~QYNQo5nX1RU8Mlz0W67WgiPD7rkJdI3jnxDTWLk-vh5xsjIummkeGsKyYcz6Cq17DGx01Tjqp~o3gScgmAlR-Zhe8NbXgznKcgWpeIvIrTfgqoKQH30lsA0vQ7rv6I9Ng8sSsKrLH3A__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA',
     job: 'Full-stack developer',
     person: 'Bruno Lopes',
     text: 'loved it!',
-    rating: new Array(5).fill(<img className="star" src="/star.png" />)
+    rating: new Array(5).fill(<img alt="rating star" className="star" src="/star.png" />)
   },
 ]
 
@@ -98,7 +98,7 @@ export default function Home() {
           </div>
           <div className="websiteWrapper">
             <span>
-              <a href="https://alexandrempsantos.com">alexandrempsantos.com</a>
+              <a rel="noopener" href="https://alexandrempsantos.com">alexandrempsantos.com</a>
             </span>
           </div>
         </header >
@@ -121,10 +121,11 @@ export default function Home() {
           </div>
           <a
             href={bookLink}
+            rel="noopener"
             target="_blank"
             className="button buyButton"
           >
-            <img src="/amazon.png" />
+            <img src="/amazon.png" alt="Buy from amazon logo" />
                 Buy from Amazon
           </a>
         </div>
@@ -151,7 +152,7 @@ export default function Home() {
         <SectionTitle className="dark">What's inside</SectionTitle>
         <SectionResume className="dark">A 10 chapter guided journey on learning Deno and its features while building a complete web application, from hello world, to testing, adding users and deploying.</SectionResume>
         <div className="bookSectionWrapper">
-          <img className="denoImage" src="/deno-image.png" />
+          <img alt="Deno logo" className="denoImage" src="/deno-image.png" />
           <BookSection
             title="I. Introduction" chapters={['What is deno?', 'The toolchain', 'Runtime and standard library']} />
           <BookSection
@@ -172,7 +173,7 @@ export default function Home() {
               'Deploying a Deno application',
               'What\'s next?',
             ]} />
-          <a href={bookLink} target="_blank" className="button accessContent">Access all the content</a>
+          <a rel="noopener" href={bookLink} target="_blank" className="button accessContent">Access all the content</a>
         </div>
       </Section>
       <Section className="dark">
@@ -226,7 +227,7 @@ export default function Home() {
           <div>Alexandre Portela dos Santos</div>
           <div className="job">Engineering manager / Tech lead @ KI labs</div>
         </div>
-        <img className="authorPhoto" src="/author.png" />
+        <img alt="Alexandre Portela dos Santos photo" className="authorPhoto" src="/author.png" />
         <p className="white-text">
           Alexandre Portela dos Santos is a software engineer passionate about
           products and startups.
@@ -248,17 +249,17 @@ export default function Home() {
           nurture those values in every project he works in.
         </p>
         <div className="contacts">
-          <a href="https://www.linkedin.com/in/alexandrempsantos/">LinkedIn</a>|
-          <a href="https://github.com/asantos00">GitHub</a>|
-          <a href="https://twitter.com/ampsantos0">Twitter</a>|
-          <a href="https://alexandrempsantos.com">Blog</a>
+          <a rel="noopener" href="https://www.linkedin.com/in/alexandrempsantos/">LinkedIn</a>|
+          <a rel="noopener" href="https://github.com/asantos00">GitHub</a>|
+          <a rel="noopener" href="https://twitter.com/ampsantos0">Twitter</a>|
+          <a rel="noopener" href="https://alexandrempsantos.com">Blog</a>
         </div>
       </Section>
       <Section className="questions">
         <h3 className="inverted">Questions?</h3>
         <p>
           Email me at{" "}
-          <a href="mailto:alexandre.santozz@gmail.com">
+          <a rel="noopener" href="mailto:alexandre.santozz@gmail.com">
             alexandre.santozz@gmail.com
         </a>
         </p>
